@@ -1,0 +1,8 @@
+click
+numpy
+PyMuPDF==1.23.2 # PyMuPDF is a specific version
+scikit-learn
+pandas
+joblib
+sentence-transformers
+torch

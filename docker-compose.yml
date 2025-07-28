@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  analyzer:
+    build: .
+    image: challenge1b-analyzer:latest
+    # mount host folders to container
+    volumes:
+      - ./data/input_pdfs:/app/data/input_pdfs:ro
+      - ./models:/app/models:ro
+      - ./output:/app/output
+    # you can override CMD args here if needed
+    command: ["data/input_pdfs", "output"]

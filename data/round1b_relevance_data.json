@@ -1,0 +1,157 @@
+[
+    {
+        "query": "Persona: Travel Planner. Task: Plan a trip of 4 days for a group of 10 college friends.",
+        "section_text": "Comprehensive Guide to Major Cities in the South of France",
+        "label": 1
+    },
+    {
+        "query": "Persona: Travel Planner. Task: Plan a trip of 4 days for a group of 10 college friends.",
+        "section_text": "Coastal Adventures",
+        "label": 1
+    },
+    {
+        "query": "Persona: Travel Planner. Task: Plan a trip of 4 days for a group of 10 college friends.",
+        "section_text": "Cultural Experiences",
+        "label": 1
+    },
+    {
+        "query": "Persona: Travel Planner. Task: Plan a trip of 4 days for a group of 10 college friends.",
+        "section_text": "General Packing Tips and Tricks",
+        "label": 1
+    },
+    {
+        "query": "Persona: Travel Planner. Task: Plan a trip of 4 days for a group of 10 college friends.",
+        "section_text": "Nightlife and Entertainment",
+        "label": 1
+    },
+    {
+        "query": "Persona: Travel Planner. Task: Plan a trip of 4 days for a group of 10 college friends.",
+        "section_text": "Conclusion",
+        "label": 0
+    },
+    {
+        "query": "Persona: Travel Planner. Task: Plan a trip of 4 days for a group of 10 college friends.",
+        "section_text": "South of France - History",
+        "label": 0
+    },
+    {
+        "query": "Persona: Travel Planner. Task: Plan a trip of 4 days for a group of 10 college friends.",
+        "section_text": "Religious and Spiritual Traditions",
+        "label": 0
+    },
+    {
+        "query": "Persona: Travel Planner. Task: Plan a trip of 4 days for a group of 10 college friends.",
+        "section_text": "Basilica of Saints Nazarius and Celsus",
+        "label": 0
+    },
+    {
+        "query": "Persona: Travel Planner. Task: Plan a trip of 4 days for a group of 10 college friends.",
+        "section_text": "Matisse Museum",
+        "label": 0
+    },
+    {
+        "query": "Persona: HR professional. Task: Create and manage fillable forms for onboarding and compliance.",
+        "section_text": "Change flat forms to fillable (Acrobat Pro)",
+        "label": 1
+    },
+    {
+        "query": "Persona: HR professional. Task: Create and manage fillable forms for onboarding and compliance.",
+        "section_text": "Create multiple PDFs from multiple files",
+        "label": 1
+    },
+    {
+        "query": "Persona: HR professional. Task: Create and manage fillable forms for onboarding and compliance.",
+        "section_text": "Fill and sign PDF forms",
+        "label": 1
+    },
+    {
+        "query": "Persona: HR professional. Task: Create and manage fillable forms for onboarding and compliance.",
+        "section_text": "Send a document to get signatures from others",
+        "label": 1
+    },
+    {
+        "query": "Persona: HR professional. Task: Create and manage fillable forms for onboarding and compliance.",
+        "section_text": "Learn Acrobat - Export_1",
+        "label": 0
+    },
+    {
+        "query": "Persona: HR professional. Task: Create and manage fillable forms for onboarding and compliance.",
+        "section_text": "The Ultimate PDF Sharing Checklist",
+        "label": 0
+    },
+    {
+        "query": "Persona: HR professional. Task: Create and manage fillable forms for onboarding and compliance.",
+        "section_text": "Learn Acrobat - Generative AI_1",
+        "label": 0
+    },
+    {
+        "query": "Persona: Food Contractor. Task: Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+        "section_text": "Falafel",
+        "label": 1
+    },
+    {
+        "query": "Persona: Food Contractor. Task: Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+        "section_text": "Ratatouille",
+        "label": 1
+    },
+    {
+        "query": "Persona: Food Contractor. Task: Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+        "section_text": "Baba Ganoush",
+        "label": 1
+    },
+    {
+        "query": "Persona: Food Contractor. Task: Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+        "section_text": "Veggie Sushi Rolls",
+        "label": 1
+    },
+    {
+        "query": "Persona: Food Contractor. Task: Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+        "section_text": "Vegetable Lasagna",
+        "label": 1
+    },
+    {
+        "query": "Persona: Food Contractor. Task: Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+        "section_text": "Instructions: • Season ribs with salt, pepper, and paprika...",
+        "label": 0
+    },
+    {
+        "query": "Persona: Food Contractor. Task: Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+        "section_text": "Pork Chops with Apples",
+        "label": 0
+    },
+    {
+        "query": "Persona: Food Contractor. Task: Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+        "section_text": "Pepper Pot",
+        "label": 0
+    },
+    {
+        "query": "Persona: Food Contractor. Task: Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+        "section_text": "Peri-Peri Chicken",
+        "label": 0
+    },
+    {
+        "query": "Persona: Food Contractor. Task: Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+        "section_text": "Breakfast Ideas",
+        "label": 0
+    },
+    {
+        "query": "Persona: Food Contractor. Task: Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+        "section_text": "Lunch Ideas",
+        "label": 0
+    },
+    {
+        "query": "Persona: Food Contractor. Task: Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+        "section_text": "Beef Stroganoff",
+        "label": 0
+    },
+    {
+        "query": "Persona: Food Contractor. Task: Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+        "section_text": "Chicken Parmesan",
+        "label": 0
+    },
+    {
+        "query": "Persona: Food Contractor. Task: Prepare a vegetarian buffet-style dinner menu for a corporate gathering, including gluten-free items.",
+        "section_text": "Beef Tacos",
+        "label": 0
+    }
+]
