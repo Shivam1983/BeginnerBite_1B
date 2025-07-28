@@ -1,0 +1,131 @@
+{
+    "metadata": {
+        "input_documents": [
+            "Learn Acrobat - Create and Convert_1.pdf",
+            "Learn Acrobat - Create and Convert_2.pdf",
+            "Learn Acrobat - Edit_1.pdf",
+            "Learn Acrobat - Edit_2.pdf",
+            "Learn Acrobat - Export_1.pdf",
+            "Learn Acrobat - Export_2.pdf",
+            "Learn Acrobat - Fill and Sign.pdf",
+            "Learn Acrobat - Generative AI_1.pdf",
+            "Learn Acrobat - Generative AI_2.pdf",
+            "Learn Acrobat - Request e-signatures_1.pdf",
+            "Learn Acrobat - Request e-signatures_2.pdf",
+            "Learn Acrobat - Share_1.pdf",
+            "Learn Acrobat - Share_2.pdf",
+            "Test Your Acrobat Exporting Skills.pdf",
+            "The Ultimate PDF Sharing Checklist.pdf"
+        ],
+        "persona": {
+            "role": "HR professional"
+        },
+        "job_to_be_done": {
+            "task": "Create and manage fillable forms for onboarding and compliance."
+        },
+        "processing_timestamp": "2025-07-28T19:44:21.778375"
+    },
+    "extracted_sections": [
+        {
+            "document": "Learn Acrobat - Fill and Sign.pdf",
+            "page_number": 2,
+            "section_title": "Flat forms",
+            "importance_rank": 1
+        },
+        {
+            "document": "Learn Acrobat - Request e-signatures_1.pdf",
+            "page_number": 3,
+            "section_title": "Based Authentication",
+            "importance_rank": 2
+        },
+        {
+            "document": "Learn Acrobat - Request e-signatures_1.pdf",
+            "page_number": 19,
+            "section_title": "Adobe Acrobat Sign",
+            "importance_rank": 3
+        },
+        {
+            "document": "Learn Acrobat - Request e-signatures_1.pdf",
+            "page_number": 9,
+            "section_title": "Send in Bulk",
+            "importance_rank": 4
+        },
+        {
+            "document": "Learn Acrobat - Request e-signatures_1.pdf",
+            "page_number": 20,
+            "section_title": "Sign PDF files using certificate IDs",
+            "importance_rank": 5
+        },
+        {
+            "document": "Learn Acrobat - Request e-signatures_1.pdf",
+            "page_number": 27,
+            "section_title": "Identities & Trusted Certificates",
+            "importance_rank": 6
+        },
+        {
+            "document": "Learn Acrobat - Request e-signatures_1.pdf",
+            "page_number": 28,
+            "section_title": "Signatures",
+            "importance_rank": 7
+        },
+        {
+            "document": "Learn Acrobat - Create and Convert_1.pdf",
+            "page_number": 24,
+            "section_title": "Convert email messages to a new PDF",
+            "importance_rank": 8
+        },
+        {
+            "document": "Learn Acrobat - Edit_1.pdf",
+            "page_number": 14,
+            "section_title": "Adjust Objects",
+            "importance_rank": 9
+        }
+    ],
+    "sub_section_analysis": [
+        {
+            "document": "Learn Acrobat - Request e-signatures_1.pdf",
+            "refined_text": "Based Authentication , Phone, or Acrobat Sign . • Password Protect the PDF file. • Set a",
+            "page_number": 3
+        },
+        {
+            "document": "Learn Acrobat - Request e-signatures_1.pdf",
+            "refined_text": "Adobe Acrobat Sign . Why use certificate signatures? Many business transactions, including financial, legal, and other regulated transactions, require high assurance when signing documents. When documents are distributed electronically, it's important that recipients can: • Verify document authenticity—confirming the identity of each person who signed the document • Verify document integrity—confirming that the document has not been altered in transit Certificate-based signatures provide both of these security services. Many businesses and governments have chosen to set up a certificate-based digital signature infrastructure within their organization. They use third-party certificate authorities to provide independent identity validation. Examples include: For instance, companies in the European Union who need to comply with advanced or qualified electronic signature requirements in eIDAS e-signature regulation or the ETSI PAdES standard",
+            "page_number": 19
+        },
+        {
+            "document": "Learn Acrobat - Request e-signatures_1.pdf",
+            "refined_text": "(PDF Advanced Electronic Signatures). What can I do with certificate IDs? Once certificate-based digital IDs have been provided to end users, they can use Acrobat or",
+            "page_number": 20
+        },
+        {
+            "document": "Learn Acrobat - Create and Convert_1.pdf",
+            "refined_text": "Convert email messages to a new PDF 1. In Outlook or Lotus Notes, select the individual email messages. 2. Do one of the following: • (Outlook) Choose Acrobat > Selected Messages > Create New PDF . • (Lotus Notes) Choose Actions > Convert Selected Messages To Adobe PDF . 3. In the Save Adobe PDF As dialog box, select a location, type a filename, and click Save .",
+            "page_number": 24
+        },
+        {
+            "document": "Learn Acrobat - Fill and Sign.pdf",
+            "refined_text": "Flat forms : These do not have interactive fields. It could be a paper form or PDF that hasn’t been optimized for form filling. The Fill & Sign tool automatically detects the form fields like text fields, comb fields, checkboxes, and radio buttons. You can manually add text and other symbols anywhere on the form using the Fill & Sign tool if required. You can complete the forms by entering information and adding your signatures. Acrobat also allows you to send your completed forms to others and securely save them in Adobe cloud storage. Fill and sign PDF forms To complete and sign PDF forms, open the form in Acrobat and then select E-Sign from the global bar. Alternatively, you can select All tools > Fill & Sign . It displays the Fill & Sign tools in the left pane. You can now fill in the form fields and sign the form using the sign tools described in the following topics.",
+            "page_number": 2
+        },
+        {
+            "document": "Learn Acrobat - Fill and Sign.pdf",
+            "refined_text": "Is the form fillable? Not all forms are fillable. Sometimes form creators don’t convert their PDFs to interactive fillable forms. Or, they intentionally design a form that you can fill in only by hand or with the Fill & Sign tool. These non-interactive forms are called flat forms.",
+            "page_number": 8
+        },
+        {
+            "document": "Learn Acrobat - Request e-signatures_1.pdf",
+            "refined_text": "Send in Bulk tool as explained earlier. The Send in bulk file upload page is displayed. 2. Add a file : Upload (by search or drag-and-drop) the primary file that you are using to build your agreement template. The selector on the right of the Select a file button allows you to choose from the source where the file resides. The default is your local system. Once a file is selected, the configuration page loads. 3. Add participants : 1. List the participants required. • The Sign action is assigned by default. • The Sign action allows the participant to enter field data and sign the agreement. • Up to 50 participants are supported. • Each participant listed receives their own agreement. 2. Enter recipient email addresses followed by commas, or copy and paste a list of email addresses into the Email field. 3. Configure participant authentication by clicking the key icon to the right of the participant. • Email is the default authentication method for confirming the identity of each participant and is sufficient to obtain a legal signature in most cases. Password authentication can be added to increase security. When configured, the participant must enter the password before they can interact with the agreement. 4. . (Optional) Add yourself and/or CC'd parties • Click Add me to add yourself as a counter signer. • Click Add cc to add people you want to be copied when the agreement is sent and complete. 5. (Optional) Add additional files if needed. The initial file selected to start the agreement template is already attached. Upload any additional file(s) that you require. • Multiple files can be uploaded. • All files uploaded are concatenated into one file for the final agreement. • The order the files are listed dictates how the final agreement will look. • You can click and drag the files to sort them. • You must share this password with the participants out-of-band. 6. Add Agreement Details: • Name your agreement. All agreements generated from the",
+            "page_number": 9
+        },
+        {
+            "document": "Learn Acrobat - Request e-signatures_1.pdf",
+            "refined_text": "Sign PDF files using certificate IDs • Place a signature box anywhere on the page • Add multiple signatures to a page • Add a time stamp to the document when working with a configured timestamp server • Certify a document with a visible or hidden signature so that recipients can verify authenticity with or without seeing a visible signature on the page • Automatically embed certificate data to support long-term validation Validate documents • Validate all signatures, confirming the identity of everyone who signed the document • Validate document integrity by tracking all previously signed versions of a document to verify changes made during the document’s lifecycle Set privileges and permissions for others • Certify a document while leaving portions of it available for form filling , signatures, or comments • Use Acrobat Pro software to enable users of Reader 9 or later to sign with certificate IDs • Use Acrobat Standard or Pro to encrypt a PDF document with a certificate ID to restrict usage such as printing, editing, or copying What if my organization isn’t prepared to set up certificate- based signatures? Consider signing up for",
+            "page_number": 20
+        },
+        {
+            "document": "Learn Acrobat - Create and Convert_1.pdf",
+            "refined_text": "Choose File Specifies the name and location of the archiving log. Embed Index For Faster Search Creates an index that you can search to find specific words or characters instead of having to search each individual document. 4. Click Add , and select the email folders and subfolders. Then select or deselect the",
+            "page_number": 26
+        }
+    ]
+}

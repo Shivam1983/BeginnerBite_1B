@@ -1,6 +1,6 @@
 click
 numpy
-PyMuPDF==1.23.2 # PyMuPDF is a specific version
+PyMuPDF
 scikit-learn
 pandas
 joblib
