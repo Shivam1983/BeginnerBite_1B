@@ -129,16 +129,22 @@ BeginnerBytes_1B/
 
 ## 🧭 System Architecture
 
-```mermaid
-flowchart TD
-    Q[Persona + Job] --> E[Query Embedding]
-    A[PDFs] --> B[Section Extraction (Round 1A)]
-    B --> C[Section Chunking]
-    C --> D[Section Embedding]
-    E & D --> F[Feature Vector]
-    F --> G[RandomForest Ranker]
-    G --> H[Rank & Filter Top N]
-    H --> I[Formatted JSON Output]
+```
+[Persona + Job] → Query Embedding
+       ↓
+     [PDFs] → Section Extraction (Round 1A)
+       ↓
+  Section Chunking
+       ↓
+  Section Embedding
+       ↓
+(Embeddings + Cosine Similarity + Level)
+       ↓
+ RandomForest Ranker
+       ↓
+ Rank & Filter Top N
+       ↓
+ Final JSON Output
 ```
 
 ---
@@ -224,5 +230,5 @@ docker run --rm -v "$(pwd):/app" --network none beginnerbytes_1b:latest data/inp
 
 ## 📬 Contact & Support
 
-Reach out to: **[revanthkurapati56@gmail.com](mailto:revanthkurapati56@gmail.com)**
+Reach out to: **[revanthkurapati2004@gmail.com](mailto:revanthkurapati2004@gmail.com)**
 If you found this project useful, please **🌟 star** the repository!
