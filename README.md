@@ -1,211 +1,228 @@
-# BeginnerBytes - PDF Analyzer (Adobe Hackathon 2025)
+# BeginnerBytes - Persona-Driven PDF Intelligence (Adobe Hackathon 2025)
 
 **Team Name:** beginnerbytes
 **Members:** Revanth, Shivam, Ashutosh
-**Challenge:** Adobe India Hackathon - Connecting the Dots
+**Challenge:** Adobe India Hackathon - Connecting the Dots (Round 1B)
 
-Automatically extract hierarchical headings (Title, H1, H2, H3) from raw PDF files and generate structured JSON outlines.
+Build a smart document intelligence system that extracts and ranks the most relevant sections/sub-sections from a PDF collection based on a specific persona and job-to-be-done.
 
 ---
 
 ## 📚 Table of Contents
 
-* [📁 Directory Structure](#-directory-structure)
-* [🔄 Flow Chart](#-flow-chart)
-* [🚀 Challenge Overview](#-challenge-overview)
-* [👥 Team Details](#-team-details)
-* [🧠 Our Approach](#-our-approach)
-* [⚙ Setup & Installation](#-setup--installation)
-* [🐳 Dockerization](#-dockerization)
-* [📤 Output Format](#-output-format)
+* [📌 Problem Statement](#-problem-statement)
+* [🧠 Key Features](#-key-features)
 * [🛠 Tech Stack](#-tech-stack)
-* [📬 Contact](#-contact)
-* [⭐ Support](#-support)
+* [📁 Project Directory Structure](#-project-directory-structure)
+* [🧭 System Architecture](#-system-architecture)
+* [⚙ Setup & Installation](#-setup--installation)
+* [🏋 Training the Ranker](#-training-the-ranker)
+* [🚀 Inference Execution](#-inference-execution)
+* [🐳 Docker Usage](#-docker-usage)
+* [✅ Constraints & Compliance](#-constraints--compliance)
+* [🎯 Contributions](#-contributions)
+* [🔮 Future Improvements](#-future-improvements)
+* [📬 Contact & Support](#-contact--support)
 
 ---
 
-## 📁 Directory Structure
+## 📌 Problem Statement
 
-```text
-Adobe_hackathon2025/
-├── analyze_pdf.py
-├── run_project.py
-├── install_requirements.py
-├── setup.py
-├── run_docker.bat
-├── run_docker.sh
-├── Dockerfile
-├── docker-compose.yml
-├── .gitignore
-├── .dockerignore
-├── DOCKER.md
-├── DOCKER_COMMANDS.md
-├── DOCKER_INSTALL.md
-├── README.md
-├── NEW_README.md
-├── pip.conf
-├── requirements.txt
-├── requirements-minimal.txt
-├── test_imports.py
-├── input_pdfs/
-├── pdf_analyzer/
-│   ├── __init__.py
-│   ├── __main__.py
-│   ├── cli/
-│   ├── config/
-│   ├── core/
-│   ├── model/
-│   └── utils/
-├── scripts/
-├── src/
-└── tests/
-```
+In Round 1B, we were required to build a system that:
 
----
-
-## 🔄 Flow Chart
-
-```text
-PDF → Extract spans → Feature vector (x,y,size,bold) → ML Classifier → Heading Level Prediction → JSON Outline
-```
-
----
-
-## 🚀 Challenge Overview
-
-### Round 1B: Persona-Driven Document Intelligence
-
-* Input: 3–10 PDFs + Persona + Job
-* Output: Ranked relevant sections and refined subsection content in JSON
-* Constraints:
-
-  * Time: ≤ 60 sec
-  * Model Size: ≤ 1GB
-  * Offline, CPU-only
-
----
-
-## 👥 Team Details
-
-* **Team Name:** beginnerbytes
-* **Members:** Revanth, Shivam, Ashutosh
-
----
-
-## 🧠 Our Approach
-
-1. **Span Extraction:**
-
-   * For each line of the PDF, we extracted X/Y coordinates, font size, bold flag, and spacing.
-
-2. **Manual Annotation:**
-
-   * Labeled over **2000+** lines with correct heading levels (Title, H1, H2, H3).
-
-3. **Model Training:**
-
-   * Used features to train a lightweight ML classifier (Decision Tree).
-
-4. **Inference:**
-
-   * Trained model is used to predict heading levels for any new PDF.
-   * Outputs structured JSON with correct levels and page numbers.
-
----
-
-## ⚙ Setup & Installation
-
-### Prerequisites
-
-* Python 3.8+
-* pip
-* Docker (optional)
-
-### Local Setup
-
-```bash
-git clone <REPO_URL> && cd Adobe_hackathon2025
-python -m venv venv
-# Activate virtual environment
-# For PowerShell
-.\venv\Scripts\Activate.ps1
-# For CMD
-.\venv\Scripts\activate.bat
-pip install --upgrade pip
-pip install -r requirements.txt
-```
-
-### Training the Model (Optional)
-
-```bash
-# Step 1: Generate annotation template
-python scripts/export_spans.py
-
-# Step 2: Label the data → save as data/annotations.csv
-
-# Step 3: Train the model
-python -m src.main --round train data/input_pdfs output/
-```
-
-### Running Inference
-
-```bash
-python -m src.main --round 1A data/input_pdfs output/
-```
-
----
-
-## 🐳 Dockerization
-
-### Build Image
-
-```bash
-docker build --platform linux/amd64 -t pdf-analyzer .
-```
-
-### Run Inference (No Internet)
-
-```bash
-docker run --rm -v "${PWD}/data/input_pdfs:/app/input" -v "${PWD}/output:/app/output" --network none pdf-analyzer
-```
-
-### Output:
-
-* All PDFs in `/app/input` are processed
-* Corresponding `<filename>.json` is written to `/app/output`
-
----
-
-## 📤 Output Format
+1. Takes **3–10 PDF documents** as input
+2. Accepts a **persona description** and a **job-to-be-done**
+3. **Analyzes and extracts** the most relevant sections & sub-sections from the documents
+4. Returns a **ranked JSON output** as follows:
 
 ```json
 {
-  "title": "Understanding AI",
-  "outline": [
-    { "level": "H1", "text": "Introduction", "page": 1 },
-    { "level": "H2", "text": "What is AI?", "page": 2 },
-    { "level": "H3", "text": "History of AI", "page": 3 }
+  "metadata": {
+    "input_documents": [...],
+    "persona": "...",
+    "job_to_be_done": "...",
+    "timestamp": "YYYY-MM-DDThh:mm:ssZ"
+  },
+  "selected_sections": [
+    { "document": "doc1.pdf", "page": 2, "section_title": "Methodology", "importance_rank": 1 }
+  ],
+  "selected_subsections": [
+    { "document": "doc2.pdf", "page": 5, "subsection_title": "Findings", "importance_rank": 1 }
   ]
 }
 ```
 
 ---
 
+## 🧠 Key Features
+
+* Reuses structured output from **Round 1A** (outline with headings)
+* Uses **semantic embeddings** from `all-MiniLM-L6-v2` (Sentence Transformers)
+* Computes **cosine similarity** between query (persona+job) and section embeddings
+* Trains a **Random Forest Ranker** on handcrafted relevance data
+* Outputs top N sections and sub-sections with `importance_rank`
+* Fully **offline**, **Docker-compatible**, and **modular**
+
+---
+
 ## 🛠 Tech Stack
 
-* Python 3.8+
+* Python 3.10
+* Sentence-Transformers
+* scikit-learn
 * PyMuPDF (fitz)
-* Scikit-learn (Decision Tree)
+* Pandas, NumPy, Joblib
+* Click (CLI)
 * Docker
 
 ---
 
-## 📬 Contact
+## 📁 Project Directory Structure
 
-For any queries, reach out at: [revanthkurapati56@gmail.com](mailto:revanthkurapati56@gmail.com)
+```bash
+BeginnerBytes_1B/
+├── app.py                      # Entrypoint for app execution
+├── main.py                     # CLI runner
+├── Dockerfile                  # AMD64-compatible Docker config
+├── docker-compose.yml          # Optional compose support
+├── requirements.txt            # Project dependencies
+├── requirements-lite.txt       # Lightweight dependency version
+├── .gitignore                  # Ignore virtual env, data, models, etc.
+│
+├── data/
+│   └── round1b_relevance_data.json      # Labeled training data (persona-task-section)
+│
+├── models/
+│   ├── heading_model.joblib            # Round 1A heading detector
+│   ├── relevance_ranker.joblib         # Trained section ranker
+│   └── sentence_transformer_model/     # all-MiniLM-L6-v2 downloaded locally
+│       ├── config.json
+│       ├── vocab.txt
+│       └── ... (other transformer config files)
+│
+├── output/
+│   ├── sample1_output.json
+│   ├── sample2_output.json
+│   └── sample3_output.json
+│
+├── pdfs_input/
+│   ├── sample1/
+│   ├── sample2/
+│   └── sample3/
+│
+├── processing_data/
+│   └── relevance_training_data.json
+│
+├── scripts/
+│   └── sentence_transformer_model.py  # Sentence embedding utilities
+│
+├── src/
+│   ├── round1a_deps/                  # Modules reused from Round 1A
+│   └── round1b/
+│       ├── document_analyzer.py
+│       ├── relevance_model.py
+│       ├── text_chunker.py
+│       └── train_ranker.py
+```
 
 ---
 
-## ⭐ Support
+## 🧭 System Architecture
 
-If you found this project helpful, please **star** the repo 🙌
+```mermaid
+flowchart TD
+    Q[Persona + Job] --> E[Query Embedding]
+    A[PDFs] --> B[Section Extraction (Round 1A)]
+    B --> C[Section Chunking]
+    C --> D[Section Embedding]
+    E & D --> F[Feature Vector]
+    F --> G[RandomForest Ranker]
+    G --> H[Rank & Filter Top N]
+    H --> I[Formatted JSON Output]
+```
+
+---
+
+## ⚙ Setup & Installation
+
+```bash
+git clone <repo_url> && cd BeginnerBytes_1B
+python -m venv venv
+source venv/bin/activate  # or activate.bat for Windows
+pip install -r requirements.txt
+```
+
+### Download Sentence Transformer
+
+```bash
+from sentence_transformers import SentenceTransformer
+SentenceTransformer('all-MiniLM-L6-v2').save_pretrained('models/sentence_transformer_model')
+```
+
+---
+
+## 🏋 Training the Ranker
+
+```bash
+python src/round1b/train_ranker.py \
+  --input data/round1b_relevance_data.json \
+  --output models/relevance_ranker.joblib
+```
+
+---
+
+## 🚀 Inference Execution
+
+```bash
+python src/main.py data/input_pdfs/sample1 output/
+```
+
+Repeat for each sample folder (sample2/, sample3/, etc.)
+
+---
+
+## 🐳 Docker Usage
+
+```bash
+# Build
+docker build --platform linux/amd64 -t beginnerbytes_1b:latest .
+
+# Run
+docker run --rm -v "$(pwd):/app" --network none beginnerbytes_1b:latest data/input_pdfs/sample1 output/
+```
+
+---
+
+## ✅ Constraints & Compliance
+
+| Requirement          | Our Solution                  |
+| -------------------- | ----------------------------- |
+| ⏱ Execution Time     | ≤ 60 sec (passes)             |
+| 📦 Model Size        | ≤ 1 GB (uses \~200MB)         |
+| 🔌 Offline Execution | Enforced via `--network none` |
+| ⚙ CPU Only           | Docker AMD64 base image       |
+
+---
+
+## 🎯 Contributions
+
+* Integrated Round 1A output as feature input
+* Combined semantic + structural features for ranking
+* Modular pipeline with reproducible outputs
+* Fully offline Dockerized solution
+
+---
+
+## 🔮 Future Improvements
+
+* Enhance training set diversity for better generalization
+* Add visual UI for interacting with results
+* Test with scanned PDFs (OCR)
+* Adopt transformer-based ranking (e.g., cross-encoders)
+
+---
+
+## 📬 Contact & Support
+
+Reach out to: **[revanthkurapati56@gmail.com](mailto:revanthkurapati56@gmail.com)**
+If you found this project useful, please **🌟 star** the repository!
